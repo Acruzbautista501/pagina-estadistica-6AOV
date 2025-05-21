@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Investigación de Edades en Naranjos, Ver.</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 4rem;
+    }
+    section {
+      padding: 3rem 0;
+    }
+    .bg-primary-light {
+      background-color: #e9f0ff;
+    }
+    .table-responsive {
+      margin: 30px;
+    }
+    canvas {
+      max-width: 900px;
+      margin: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Edades en Naranjos</a>
+  </div>
+</nav>
+
+<header class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4">Investigación de Edades en Naranjos, Ver.</h1>
+    <p class="lead">CETis No. 133 - 6° Semestre Ofimática</p>
+  </div>
+</header>
+
+<section id="integrantes" class="bg-light">
+  <div class="container">
+    <h2 class="text-center">Integrantes</h2>
+    <p class="text-center">
+      Bautista Salvador Ángel Gabriel, Chávez Cruz Julio Enrique, Olan Sosa Pablo Freddy Cruz Bautista, Sergio Yael Gámez Vázquez, Castellanos Gallardo Christopher Gustavo
+    </p>
+    <p class="text-center"><strong>Docente:</strong> José Rogelio Pérez Silva</p>
+  </div>
+</section>
+
+<section id="introduccion" class="bg-primary-light">
+  <div class="container">
+    <h2 class="text-center">Introducción</h2>
+    <p>
+      Somos alumnos del CETis 133 de sexto semestre de ofimática. Este es nuestro análisis de caso sobre la distribución de edades en Naranjos, Ver. Según el Censo de Población y Vivienda 2020 del INEGI, la ciudad contaba con una población de 20,073 habitantes, lo que representa aproximadamente el 75% del total municipal.
+    </p>
+  </div>
+</section>
+
+<section id="planteamiento">
+  <div class="container">
+    <h2 class="text-center">Planteamiento</h2>
+    <p>
+      La distribución por edades en Naranjos muestra que el grupo de adultos (15 a 59 años) constituye la mayoría, con 11,500 personas. Los menores de 15 años suman 4,170, mientras que los adultos mayores (60 años o más) alcanzan los 3,602 habitantes. La edad mediana en la ciudad es de 29.8 años, ligeramente superior al promedio estatal de 27.2 años, lo que indica una población relativamente joven pero con una proporción creciente de adultos mayores.
+    </p>
+  </div>
+</section>
+
+<section id="justificacion" class="bg-primary-light">
+  <div class="container">
+    <h2 class="text-center">Justificación</h2>
+    <p>
+      Esta distribución tiene implicaciones significativas para la planificación de servicios sociales, educativos y de salud, así como para el desarrollo económico local. El aumento en la proporción de adultos mayores sugiere la necesidad de políticas públicas que aborden el envejecimiento poblacional, mientras que la presencia de una población joven requiere inversiones en educación y empleo.
+    </p>
+  </div>
+</section>
+
+<section id="objetivo">
+  <div class="container">
+    <h2 class="text-center">Objetivo</h2>
+    <p>
+      Esta investigación se propone analizar en detalle la estructura por edades de la ciudad de Naranjos, identificar las tendencias demográficas actuales y proyectadas, y evaluar las implicaciones sociales y económicas de estos cambios para la comunidad local.
+    </p>
+  </div>
+</section>
+
+<section id="tabla" class="bg-primary-light">
+  <div class="container">
+    <h2 class="text-center">Distribución por Edades</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-sm text-center align-middle">
+        <thead class="table-primary">
+            <tr>
+            <th>Intervalo</th>
+            <th>Conteo</th>
+            <th>PM</th>
+            <th>fi</th>
+            <th>Fi2</th>
+            <th>(PM)(fi)</th>
+            <th>Σ(pm)(fi)</th>
+            <th>|pm-X̄|</th>
+            <th>|pm-X̄| fi</th>
+            <th>Σ|pm-X̄| fi</th>
+            <th>(pm-X̄)²</th>
+            <th>(pm-X̄)².fi</th>
+            <th>Σ(pm-X̄)².fi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>[0-9]</td><td>25</td><td>4.5</td><td>25</td><td>25</td><td>112.5</td><td>112.5</td><td>414.8</td><td>10370</td><td>10370</td><td>172059.04</td><td>4301476</td><td>4301476</td></tr>
+            <tr><td>[10-19]</td><td>40</td><td>14.5</td><td>40</td><td>65</td><td>942.5</td><td>1055</td><td>404.8</td><td>16192</td><td>26562</td><td>163863.04</td><td>6554521.6</td><td>10855997.6</td></tr>
+            <tr><td>[20-29]</td><td>55</td><td>24.5</td><td>55</td><td>120</td><td>2940</td><td>3995</td><td>394.8</td><td>21714</td><td>48276</td><td>155867.04</td><td>8572687.2</td><td>19428683.2</td></tr>
+            <tr><td>[30-39]</td><td>50</td><td>34.5</td><td>50</td><td>170</td><td>5865</td><td>9860</td><td>384.8</td><td>19240</td><td>67516</td><td>148071.04</td><td>7403552</td><td>26832326.8</td></tr>
+            <tr><td>[40-49]</td><td>45</td><td>44.5</td><td>45</td><td>215</td><td>9567.5</td><td>19427.5</td><td>374.8</td><td>16866</td><td>84382</td><td>140475.04</td><td>6321376.8</td><td>33153613.6</td></tr>
+            <tr><td>[50-59]</td><td>35</td><td>54.4</td><td>35</td><td>250</td><td>13600</td><td>33027.5</td><td>364.9</td><td>12771.5</td><td>97153.5</td><td>133152.01</td><td>4660303.35</td><td>37813903.95</td></tr>
+            <tr><td>[60-69]</td><td>25</td><td>64.5</td><td>25</td><td>275</td><td>1773.5</td><td>50765</td><td>354.8</td><td>8870</td><td>106023.5</td><td>125883.04</td><td>3147006</td><td>40960009.95</td></tr>
+            <tr><td>[70-79]</td><td>15</td><td>74.5</td><td>15</td><td>290</td><td>2160</td><td>72370</td><td>344.8</td><td>5172</td><td>111195.5</td><td>118888.01</td><td>1783305.6</td><td>42744315.55</td></tr>
+            <tr><td>[80-89]</td><td>7</td><td>84.5</td><td>7</td><td>297</td><td>2509.5</td><td>97466.5</td><td>334.8</td><td>2343.6</td><td>113539.1</td><td>112097.04</td><td>784637.28</td><td>43528952.83</td></tr>
+            <tr><td>[90-99]</td><td>3</td><td>94.5</td><td>3</td><td>300</td><td>28350</td><td>125816.5</td><td>324.8</td><td>974.4</td><td>114513.5</td><td>105495.04</td><td>316485.12</td><td>43845437.95</td></tr>
+        </tbody>
+        </table>
+  </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="lineChart" width="1000" height="550"></canvas>
+
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-0">Proyecto escolar &copy; 2025 - CETis 133</p>
+  </div>
+</footer>
+
+
+<script>
+    const ctx = document.getElementById('lineChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [
+          '[0-9]', '[10-19]', '[20-29]', '[30-39]', '[40-49]',
+          '[50-59]', '[60-69]', '[70-79]', '[80-89]', '[90-99]'
+        ],
+        datasets: [{
+          label: 'PM x fi',
+          data: [
+            112.5, 942.5, 2940, 5865, 9567.5,
+            13600, 17737.5, 2160, 2509.5, 28350
+          ],
+          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderWidth: 2,
+          fill: true,
+          tension: 0.3,
+          pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Gráfica de Línea: (PM)(fi)',
+            font: {
+              size: 18
+            }
+          },
+          legend: {
+            display: true,
+            position: 'top'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
